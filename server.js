@@ -3,21 +3,23 @@ const app = express();
 const PORT = 3001;
 const api = require("./Routes/notes")
 const noteRouter = require('./Routes/notes')
+const path = require('path');
+// const util = require('util');
 
 
 
 app.use(express.json())
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use("/api", api)
-app.use("/notes", noteRoute)
+app.use("/notes", noteRouter)
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'))
 });
 
 
-noteRoute.post("/notes", (req, res) => {
+noteRouter.post("/notes", (req, res) => {
     let note = JSON.parse(fs.readFileSync(database))
     req.body.id = uuidv4;
     note.push()
@@ -36,7 +38,7 @@ app.get('/notes', (req, res) => {
 //     })
 // });
 
-const readFromFile = util.promisify(fs.readFile);
+// const readFromFile = util.promisify(fs.readFile);
 
 app.post('/api/notes', (req, res) => {
     let newNotes = {
