@@ -4,7 +4,7 @@ const PORT = 3001;
 const api = require("./Routes/notes")
 const noteRouter = require('./Routes/notes')
 const path = require('path');
-// const util = require('util');
+
 
 
 
@@ -30,15 +30,6 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/notes.html'))
 });
 
-// app.get('/notes', (req, res) => {
-//     fs.readFile('db/db.json', 'utf8', function(err, data) {
-//         if (err) {console.log(err);}
-//         let notes = JSON.parse(data);
-//         res.json(notes);
-//     })
-// });
-
-// const readFromFile = util.promisify(fs.readFile);
 
 app.post('/api/notes', (req, res) => {
     let newNotes = {
@@ -58,12 +49,6 @@ app.post('/api/notes', (req, res) => {
         });
     });
 });
-
-
-
-
-
-
 
 
 
