@@ -10,9 +10,6 @@ router.get('/notes', (req, res) => {
     res.json(notes);
 });
 
-router.get('/notes:id', (req, res) => {
-    let activeNote = JSON
-})
 
 router.post('/notes', (req, res) => {
     let notes = JSON.parse(fs.readFileSync(databasePath))
