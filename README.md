@@ -18,6 +18,12 @@
 <h3> <a href=#test>Tests</a> </h3>
 <h3> <a href=#question>Contact me</a> </h3>
 
+![Screenshot1](./public/assets/images/Screenshot%202023-09-09%20104517.png)
+![Screenshot2](./public/assets/images/Screenshot%202023-09-10%20103722.png)
+![Screenshot3](./public/assets/images/Screenshot%202023-09-10%20103738.png)
+
+
+
 <h2 id="install">Installation</h2>
 
 <h3>npm i</h3>
