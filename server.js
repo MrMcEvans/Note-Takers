@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const api = require("./Routes/notes")
 const noteRouter = require('./Routes/notes')
 const path = require('path');
@@ -52,10 +52,10 @@ app.post('/api/notes', (req, res) => {
 
 
 
-// app.listen(PORT, () => {
-//         console.log(
-//             `application seccesfully listening to http://localhost:${PORT}`)
-//     })
+app.listen(PORT, () => {
+        console.log(
+            `application seccesfully listening to http://localhost:${PORT}`)
+    })
 
 
     
