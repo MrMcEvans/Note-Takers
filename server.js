@@ -52,10 +52,10 @@ app.post('/api/notes', (req, res) => {
 
 
 
-app.listen(PORT, () => {
-        console.log(
-            `application seccesfully listening to http://localhost:${PORT}`)
-    })
+// app.listen(PORT, () => {
+//         console.log(
+//             `application seccesfully listening to http://localhost:${PORT}`)
+//     })
 
 
     
