@@ -17,7 +17,7 @@ router.post('/notes', (req, res) => {
     notes.push(req.body);
     fs.writeFileSync(databasePath, JSON.stringify(notes))
     res.status(200)
-    reload();
+    window.location.reload(true);
 });
 
 router.delete('/notes/:id', (req, res) => {
